@@ -1,0 +1,15 @@
+{
+  "token": "YOUR_TOKEN",
+  "invite": "YOUR_INVITE",
+  "ownerID": "OWNER_ID",
+  "defaultPrefix": "DEFAULT_PREFIX",
+  "prefix": "CUSTOM_PREFIX",
+  "discordpw": {
+    "key": "DISCORDPW_API_KEY",
+    "shouldUse": false
+  },
+  "osu": {
+    "key": "OSU_API_KEY",
+    "shouldUse": false
+  }
+}
