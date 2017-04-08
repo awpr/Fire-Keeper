@@ -1,4 +1,4 @@
-package com.svetroid.main.bot.command.commands;
+package com.svetroid.main.bot.command.commands.utility;
 
 import com.svetroid.main.Main;
 import com.svetroid.main.bot.command.Command;

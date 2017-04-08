@@ -4,21 +4,17 @@ import com.google.gson.Gson;
 import com.svetroid.main.Main;
 import com.svetroid.main.Whitelist;
 import com.svetroid.main.bot.command.CommandHandler;
-import com.svetroid.main.bot.feature.FeatureHandler;
+import java.io.File;
+import java.io.FileReader;
+import java.io.Reader;
 import net.dv8tion.jda.core.entities.ChannelType;
 import net.dv8tion.jda.core.events.ReadyEvent;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.Reader;
-
 public class BotListener extends ListenerAdapter {
 
   private CommandHandler commandHandler = new CommandHandler();
-
-  private FeatureHandler featureHandler = new FeatureHandler();
 
   private Input input;
   private Output output;
@@ -46,6 +42,7 @@ public class BotListener extends ListenerAdapter {
     if (isCommandForBot) {
       commandHandler.execute(input, output);
     }
+
   }
 
   private void initCommandBlacklist() {

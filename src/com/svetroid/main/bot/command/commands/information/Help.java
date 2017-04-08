@@ -21,10 +21,9 @@ import java.util.stream.Collectors;
 public class Help extends Command {
 
   private String[] emojis =
-      {":kissing_heart:", ":ok_hand:", ":thumbsup:", ":grinning:", ":eyes:", ":upside_down_face:",
-          ":slight_smile:", ":innocent:", ":tiger:", ":white_check_mark:", ":wink:", ":grin:",
-          ":heart:", ":yellow_heart:", ":green_heart:", ":blue_heart:", ":purple_heart:",
-          ":speech_left:"};
+      {":grinning:", ":eyes:", ":slight_smile:", ":innocent:", ":grin:", ":heart:",
+          ":yellow_heart:", ":green_heart:", ":blue_heart:", ":purple_heart:",
+          "<:Estus:298751057608310784>", "<:AshenEstus:298751103619563522>"};
 
   String helpDescription = "Type `" + Main.bot.getPrefix()
       + "help [command]` for more information on a specific command.\nType `" + Main.bot
