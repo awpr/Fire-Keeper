@@ -70,7 +70,7 @@ public class CommandHandler {
   }
 
   private boolean isValid(Input input, CommandSettings settings) {
-    boolean canSpeakInChannel = !Main.commandBlacklist.getGuilds()
+    boolean canSpeakInChannel = !Main.commandBlacklist.getChannels()
         .contains(input.getChannel().getId());
     if (settings.getOwnerCommand() && !Main.bot.getAuth().getOwnerID()
         .equals(input.getAuthor().getId())) {

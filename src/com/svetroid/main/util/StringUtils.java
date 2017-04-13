@@ -4,10 +4,8 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Iterables;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -129,25 +127,8 @@ public class StringUtils {
     return count;
   }
 
-  public static Map<String, Integer> getWordsWithCounts(String string) {
-    Map<String, Integer> result = new LinkedHashMap<>();
-    for (String s : string.split("\\s+")) {
-      Integer count = result.get(s);
-      if (count == null) {
-        count = 0;
-      }
-      result.put(s, count + 1);
-    }
-    Iterator<Map.Entry<String, Integer>> iterator = result.entrySet().iterator();
-    while (iterator.hasNext()) {
-      Map.Entry<String, Integer> entry = iterator.next();
-      String key = entry.getKey();
-      Integer value = entry.getValue();
-      if (key.isEmpty() || value.intValue() < 1 || key == null || value == null) {
-        iterator.remove();
-      }
-    }
-    return result;
+  public static boolean stringContainsItemFromList(String inputStr, String[] items) {
+    return Arrays.stream(items).parallel().anyMatch(inputStr::contains);
   }
 
 }
