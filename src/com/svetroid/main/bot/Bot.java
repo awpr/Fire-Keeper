@@ -57,8 +57,7 @@ public class Bot {
 
   public void start() {
     try {
-      JDA jda = new JDABuilder(AccountType.BOT).setToken(authentication.getToken())
-          .addListener(botListener).buildBlocking();
+      JDA jda = new JDABuilder(AccountType.BOT).setToken(authentication.getToken()).addEventListener(botListener).buildBlocking();
       jda.setAutoReconnect(true);
       this.jda = jda;
     } catch (Exception e) {
